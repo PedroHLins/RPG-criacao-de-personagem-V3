@@ -1,0 +1,116 @@
+/* Importando a fonte e definindo variáveis de cor para o tema "brasa" */
+:root {
+    --background-color: #121212;
+    --sheet-background: #1e1e1e;
+    --text-color: #e0e0e0;
+    --border-color: #444;
+    --ember-orange: #ff4500;
+    --ember-glow: rgba(255, 69, 0, 0.4);
+    --font-medieval: 'MedievalSharp', cursive;
+    --font-text: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-text);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container da ficha */
+.sheet-container {
+    width: 100%;
+    max-width: 500px; /* Reduzido um pouco pois há menos conteúdo */
+    background-color: var(--sheet-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.character-sheet {
+    padding: 40px;
+}
+
+/* Cabeçalho com o nome do personagem */
+.sheet-header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.sheet-header h1 {
+    font-family: var(--font-medieval);
+    font-size: 3em;
+    color: var(--ember-orange);
+    margin: 0;
+    text-shadow: 0 0 10px var(--ember-glow);
+}
+
+.sheet-header .character-subtitle {
+    font-size: 1.2em;
+    color: #aaa;
+    margin: 5px 0 0 0;
+}
+
+/* Estilo do .sheet-main simplificado */
+.sheet-main h3 {
+    font-family: var(--font-medieval);
+    font-size: 1.8em;
+    color: var(--ember-orange);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+    text-align: center; /* Centraliza o título "Atributos" */
+}
+
+/* Lista de atributos */
+.attributes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.attributes li {
+    font-size: 1.2em;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; /* Alinha nome e valor */
+    border-bottom: 1px solid #2a2a2a; /* Linha sutil entre atributos */
+}
+
+.attributes li:last-child {
+    border-bottom: none;
+}
+
+.attributes strong {
+    color: #c5c5c5;
+}
+
+/* Estilos do log de aventura removidos */
+
+/* Rodapé */
+.sheet-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border-color);
+}
+
+.sheet-footer a {
+    font-family: var(--font-medieval);
+    color: var(--ember-orange);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.sheet-footer a:hover {
+    text-shadow: 0 0 10px var(--ember-glow);
+}
