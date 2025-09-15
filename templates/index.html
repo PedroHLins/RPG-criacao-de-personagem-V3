@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Personagem</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <form class="character-sheet" action="/Criar-Persongaem" method="POST">
+            <h2>Forjar Personagem</h2>
+
+            <div class="input-group">
+                <label for="char-name">Nome do Personagem</label>
+                <input type="text" id="char-name" name="char-name" placeholder="Ex: Valerius, o Ousado" required>
+            </div>
+
+            <div class="input-group">
+                <label>Raça do Personagem</label>
+                <div class="radio-group">
+                    <div class="radio-option"><input type="radio" id="raca-humano" name="raca" value="Humano" required><label for="raca-humano">Humano</label></div>
+                    <div class="radio-option"><input type="radio" id="raca-elfo" name="raca" value="Elfo"><label for="raca-elfo">Elfo</label></div>
+                    <div class="radio-option"><input type="radio" id="raca-anao" name="raca" value="Anão"><label for="raca-anao">Anão</label></div>
+                    <div class="radio-option"><input type="radio" id="raca-halfling" name="raca" value="Halfling"><label for="raca-halfling">Halfling</label></div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Classe do Personagem</label>
+                <div class="radio-group">
+                    <div class="radio-option"><input type="radio" id="classe-guerreiro" name="classe" value="Guerreiro" required><label for="classe-guerreiro">Guerreiro</label></div>
+                    <div class="radio-option"><input type="radio" id="classe-mago" name="classe" value="Mago"><label for="classe-mago">Mago</label></div>
+                    <div class="radio-option"><input type="radio" id="classe-ladrao" name="classe" value="Ladrão"><label for="classe-ladrao">Ladrão</label></div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Tipo de Aventura</label>
+                <div class="radio-group">
+                     <div class="radio-option"><input type="radio" id="aventura-classica" name="aventura" value="Classica" required><label for="aventura-classica">Classica</label></div>
+                     <div class="radio-option"><input type="radio" id="aventura-aventureira" name="aventura" value="Aventureiro"><label for="aventura-aventureira">Aventureira</label></div>
+                     <div class="radio-option"><input type="radio" id="aventura-heroica" name="aventura" value="Heroica"><label for="aventura-heroica">Heroico</label></div>
+                </div>
+            </div>
+
+            <button type="submit">Criar Personagem</button>
+        </form>
+    </div>
+</body>
+</html>
