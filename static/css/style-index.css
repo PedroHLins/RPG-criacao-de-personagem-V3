@@ -40,7 +40,6 @@ body {
     text-shadow: 0 0 10px var(--ember-glow);
 }
 
-/* Grupo de Label + Input */
 .input-group {
     margin-bottom: 25px;
 }
@@ -70,7 +69,6 @@ body {
     box-shadow: 0 0 10px var(--ember-glow);
 }
 
-/* Estilos para os Radio Buttons Customizados */
 .radio-group {
     display: flex;
     flex-direction: column;
@@ -90,7 +88,6 @@ body {
     margin-bottom: 0;
 }
 
-/* Esconde o radio button padrão */
 .radio-option input[type="radio"] {
     -webkit-appearance: none;
     appearance: none;
