@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuir Atributos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <form class="character-sheet" id="distribution-form" action="/Ficha" method="POST">
+            <input type="hidden" name="char-name" value="{{ personagem.nome }}">
+            <input type="hidden" name="raca" value="{{ personagem.raca.nome }}">
+            <input type="hidden" name="classe" value="{{ personagem.classe.nome }}">
+            <input type="hidden" name="aventura" value="{{ aventura }}">
+
+            <h2>Distribua seus Atributos</h2>
+
+            <div class="rolled-values">
+                <h3>Valores Rolados</h3>
+                <p>Selecione um atributo e um valor para combiná-los.</p>
+            </div>
+
+            <div class="distribution-container">
+                <div class="attributes-list">
+                    <h3>Atributos</h3>
+                    <button type="button" class="attribute-btn" data-attribute="Forca">Força</button>
+                    <button type="button" class="attribute-btn" data-attribute="Destreza">Destreza</button>
+                    <button type="button" class="attribute-btn" data-attribute="Constituicao">Constituição</button>
+                    <button type="button" class="attribute-btn" data-attribute="Inteligencia">Inteligência</button>
+                    <button type="button" class="attribute-btn" data-attribute="Sabedoria">Sabedoria</button>
+                    <button type="button" class="attribute-btn" data-attribute="Carisma">Carisma</button>
+                </div>
+
+                <div class="values-list">
+                    <h3>Valores Disponíveis</h3>
+                    {% for valor in valores %}
+                        <button type="button" class="value-btn">{{ valor }}</button>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <input type="hidden" id="attr-Forca" name="Forca">
+            <input type="hidden" id="attr-Destreza" name="Destreza">
+            <input type="hidden" id="attr-Constituicao" name="Constituicao">
+            <input type="hidden" id="attr-Inteligencia" name="Inteligencia">
+            <input type="hidden" id="attr-Sabedoria" name="Sabedoria">
+            <input type="hidden" id="attr-Carisma" name="Carisma">
+
+            <button type="submit" id="submit-final" disabled>Forjar Ficha Final</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/distribuicao.js') }}"></script>
+</body>
+</html>

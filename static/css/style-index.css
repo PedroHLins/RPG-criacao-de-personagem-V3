@@ -144,3 +144,44 @@ button:hover {
     color: var(--form-background);
     box-shadow: 0 0 15px var(--ember-glow);
 }
+
+.rolled-values {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #2a2a2a;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.rolled-values h3 {
+    font-family: var(--font-medieval);
+    color: var(--ember-orange);
+    margin: 0 0 10px 0;
+}
+
+.rolled-values p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.attribute-btn.selected, .value-btn.selected {
+    border-color: #ffbf00;
+    color: #ffbf00;
+    box-shadow: 0 0 10px rgba(255, 191, 0, 0.5);
+}
+
+.attribute-btn:disabled, .value-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: #444;
+    color: #444;
+}
+
+#submit-final:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: transparent;
+    border-color: #444;
+    color: #444;
+}
