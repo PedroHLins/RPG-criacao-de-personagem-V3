@@ -32,7 +32,7 @@ def criar_novo_personagem():
 def exibir_ficha():
     personagem_service = PersonagemService()
     personagem_final = personagem_service.criar_persongaem_final(request.form)
-    personagem_service.criar_persongaem_inicial(personagem_final)
+    personagem_service.salvar_personagem_json(personagem_final)
     return render_template("ficha.html", personagem=personagem_final)
 
 if __name__ == "__main__":
